@@ -41,6 +41,7 @@ public class MainController {
         System.out.println("test");
 	    System.out.println("changes from github");
 	    System.out.println("add other changes from pc to new branch + 1 changes (ok I see it in github)");
+	    System.out.println("changes into my test)");
 
 
         if (filter != null && !filter.isEmpty()) {
