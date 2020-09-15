@@ -27,6 +27,7 @@ public class MainController {
     @Value("${upload.path}")
     private String uploadPath;
 
+
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
         return "greeting";
@@ -35,7 +36,10 @@ public class MainController {
     @GetMapping("/main")
     public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
-        
+
+        System.out.println("test");
+        System.out.println("test");
+
 
         if (filter != null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);
