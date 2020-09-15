@@ -40,7 +40,7 @@ public class MainController {
         System.out.println("test");
         System.out.println("test");
 	    System.out.println("changes from github");
-	    System.out.println("add other changes from pc to new branch");
+	    System.out.println("add other changes from pc to new branch + 1 changes");
 
 
         if (filter != null && !filter.isEmpty()) {
