@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
+
 <html>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -50,7 +51,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <script src="chatmain.js"></script>
+    <script type="text/javascript" src="/static/chatmain.js"></script>
   </body>
 </html>
 </@c.page>
