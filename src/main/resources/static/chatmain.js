@@ -1,6 +1,6 @@
 'use strict';
 
-var usernamePage = document.querySelector('#username-page');
+//var usernamePage = document.querySelector('#username-page');
 var chatPage = document.querySelector('#chat-page');
 var usernameForm = document.querySelector('#usernameForm');
 var messageForm = document.querySelector('#messageForm');
@@ -21,7 +21,7 @@ function connect(event) {
 	username = "temp";
 
     if(username) {
-        usernamePage.classList.add('hidden');
+        //usernamePage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
         var socket = new SockJS('/ws');

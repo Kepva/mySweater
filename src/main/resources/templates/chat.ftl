@@ -13,6 +13,7 @@
       <h2>Sorry! Your browser doesn't support Javascript</h2>
     </noscript>
 
+<!--
     <div id="username-page">
         <div class="username-page-container">
             <h1 class="title">Type your username</h1>
@@ -26,6 +27,7 @@
             </form>
         </div>
     </div>
+-->    
 
     <div id="chat-page" class="hidden">
         <div class="chat-container">
