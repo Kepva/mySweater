@@ -1,5 +1,6 @@
 package com.example.sweater.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -8,14 +9,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.sweater.repos.ChatMessageRepo;
 import com.example.sweater.service.ChatMessage;
 
-/**
- * Created by rajeevkumarsingh on 24/07/17.
- */
+
 @Controller
 @RequestMapping("/chat")
 public class ChatController {
+	
+	@Autowired
+    private ChatMessageRepo ChatMessageRepo;
 
     @GetMapping
     public String Main() {
@@ -26,7 +29,8 @@ public class ChatController {
 	@MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
-        return chatMessage;
+        ChatMessageRepo.save(chatMessage);
+		return chatMessage;
     }
 
     @MessageMapping("/chat.addUser")
