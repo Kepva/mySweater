@@ -8,6 +8,6 @@ import com.example.sweater.service.ChatMessage;
 
 public interface ChatMessageRepo extends CrudRepository<ChatMessage, Long> {
 
-    List<ChatMessage> findByTag(String tag);
+    List<ChatMessage> findByContent(String text);
 
 }
