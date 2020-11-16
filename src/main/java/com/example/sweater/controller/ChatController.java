@@ -21,6 +21,7 @@ public class ChatController {
     public String Main() {
     	return "chat";
     }
+    
 	
 	
 	@MessageMapping("/chat.sendMessage")
